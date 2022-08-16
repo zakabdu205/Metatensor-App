@@ -33,6 +33,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./helpers/getpost.js":
+/*!****************************!*\
+  !*** ./helpers/getpost.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ getPost)\n/* harmony export */ });\n/* harmony import */ var fs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! fs */ \"fs\");\n/* harmony import */ var fs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(fs__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var path__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! path */ \"path\");\n/* harmony import */ var path__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(path__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var gray_matter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gray-matter */ \"gray-matter\");\n/* harmony import */ var gray_matter__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(gray_matter__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\nfunction getPost(pth) {\n    const fileContents = fs__WEBPACK_IMPORTED_MODULE_0___default().readFileSync(path__WEBPACK_IMPORTED_MODULE_1___default().join(pth), \"utf8\");\n    const { data , content  } = gray_matter__WEBPACK_IMPORTED_MODULE_2___default()(fileContents);\n    return {\n        data,\n        content\n    };\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9oZWxwZXJzL2dldHBvc3QuanMuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFvQjtBQUNJO0FBQ1M7QUFFbEIsU0FBU0csT0FBTyxDQUFDQyxHQUFHLEVBQUU7SUFDbkMsTUFBTUMsWUFBWSxHQUFHTCxzREFBZSxDQUFDQyxnREFBUyxDQUFDRyxHQUFHLENBQUMsRUFBRSxNQUFNLENBQUM7SUFDNUQsTUFBTSxFQUFFSSxJQUFJLEdBQUVDLE9BQU8sR0FBRSxHQUFHUCxrREFBTSxDQUFDRyxZQUFZLENBQUM7SUFDOUMsT0FBTztRQUNMRyxJQUFJO1FBQ0pDLE9BQU87S0FDUixDQUFDO0NBQ0giLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9tZXRhdGVuc29yLWFwcC8uL2hlbHBlcnMvZ2V0cG9zdC5qcz82Yzg0Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBmcyBmcm9tIFwiZnNcIjtcbmltcG9ydCBwYXRoIGZyb20gXCJwYXRoXCI7XG5pbXBvcnQgbWF0dGVyIGZyb20gXCJncmF5LW1hdHRlclwiO1xuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBnZXRQb3N0KHB0aCkge1xuICBjb25zdCBmaWxlQ29udGVudHMgPSBmcy5yZWFkRmlsZVN5bmMocGF0aC5qb2luKHB0aCksIFwidXRmOFwiKTtcbiAgY29uc3QgeyBkYXRhLCBjb250ZW50IH0gPSBtYXR0ZXIoZmlsZUNvbnRlbnRzKTtcbiAgcmV0dXJuIHtcbiAgICBkYXRhLFxuICAgIGNvbnRlbnQsXG4gIH07XG59XG4iXSwibmFtZXMiOlsiZnMiLCJwYXRoIiwibWF0dGVyIiwiZ2V0UG9zdCIsInB0aCIsImZpbGVDb250ZW50cyIsInJlYWRGaWxlU3luYyIsImpvaW4iLCJkYXRhIiwiY29udGVudCJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./helpers/getpost.js\n");
+
+/***/ }),
+
 /***/ "./node_modules/next/dist/client/add-base-path.js":
 /*!********************************************************!*\
   !*** ./node_modules/next/dist/client/add-base-path.js ***!
@@ -224,10 +235,10 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({\n    value: true\n}));
 /*!***********************!*\
   !*** ./pages/blog.js ***!
   \***********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ BlogPage)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_blog_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/blog_layout */ \"./components/blog_layout.js\");\n/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/head */ \"next/head\");\n/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\nfunction BlogPage() {\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)((next_head__WEBPACK_IMPORTED_MODULE_2___default()), {\n            children: [\n                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"title\", {\n                    children: \"MetaTensor Blog\"\n                }, void 0, false, {\n                    fileName: \"/Users/main/Documents/GitHub/Metatensor-App/pages/blog.js\",\n                    lineNumber: 7,\n                    columnNumber: 9\n                }, this),\n                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_components_blog_layout__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {}, void 0, false, {\n                    fileName: \"/Users/main/Documents/GitHub/Metatensor-App/pages/blog.js\",\n                    lineNumber: 8,\n                    columnNumber: 9\n                }, this)\n            ]\n        }, void 0, true, {\n            fileName: \"/Users/main/Documents/GitHub/Metatensor-App/pages/blog.js\",\n            lineNumber: 6,\n            columnNumber: 7\n        }, this)\n    }, void 0, false, {\n        fileName: \"/Users/main/Documents/GitHub/Metatensor-App/pages/blog.js\",\n        lineNumber: 5,\n        columnNumber: 5\n    }, this);\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9wYWdlcy9ibG9nLmpzLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7OztBQUFBO0FBQW1EO0FBQ3RCO0FBQ2QsU0FBU0UsUUFBUSxHQUFHO0lBQ2pDLHFCQUNFLDhEQUFDQyxLQUFHO2tCQUNGLDRFQUFDRixrREFBSTs7OEJBQ0gsOERBQUNHLE9BQUs7OEJBQUMsaUJBQWU7Ozs7O3dCQUFROzhCQUM5Qiw4REFBQ0osK0RBQVU7Ozs7d0JBQWM7Ozs7OztnQkFDcEI7Ozs7O1lBQ0gsQ0FDTjtDQUNIIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vbWV0YXRlbnNvci1hcHAvLi9wYWdlcy9ibG9nLmpzP2NiYjQiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IEJsb2dMYXlvdXQgZnJvbSBcIi4uL2NvbXBvbmVudHMvYmxvZ19sYXlvdXRcIjtcbmltcG9ydCBIZWFkIGZyb20gXCJuZXh0L2hlYWRcIjtcbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIEJsb2dQYWdlKCkge1xuICByZXR1cm4gKFxuICAgIDxkaXY+XG4gICAgICA8SGVhZD5cbiAgICAgICAgPHRpdGxlPk1ldGFUZW5zb3IgQmxvZzwvdGl0bGU+XG4gICAgICAgIDxCbG9nTGF5b3V0PjwvQmxvZ0xheW91dD5cbiAgICAgIDwvSGVhZD5cbiAgICA8L2Rpdj5cbiAgKTtcbn1cbiJdLCJuYW1lcyI6WyJCbG9nTGF5b3V0IiwiSGVhZCIsIkJsb2dQYWdlIiwiZGl2IiwidGl0bGUiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./pages/blog.js\n");
+eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ BlogPage),\n/* harmony export */   \"getStaticProps\": () => (/* binding */ getStaticProps)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_blog_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/blog_layout */ \"./components/blog_layout.js\");\n/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/head */ \"next/head\");\n/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _helpers_getpost__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../helpers/getpost */ \"./helpers/getpost.js\");\n/* harmony import */ var next_mdx_remote_serialize__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next-mdx-remote/serialize */ \"next-mdx-remote/serialize\");\n/* harmony import */ var next_mdx_remote__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next-mdx-remote */ \"next-mdx-remote\");\nvar __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([next_mdx_remote_serialize__WEBPACK_IMPORTED_MODULE_4__, next_mdx_remote__WEBPACK_IMPORTED_MODULE_5__]);\n([next_mdx_remote_serialize__WEBPACK_IMPORTED_MODULE_4__, next_mdx_remote__WEBPACK_IMPORTED_MODULE_5__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);\n\n\n\n\n\n\nfunction BlogPage({ source  }) {\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n        children: [\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)((next_head__WEBPACK_IMPORTED_MODULE_2___default()), {\n                children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"title\", {\n                    children: \"MetaTensor Blog\"\n                }, void 0, false, {\n                    fileName: \"/Users/main/Documents/GitHub/Metatensor-App/pages/blog.js\",\n                    lineNumber: 11,\n                    columnNumber: 9\n                }, this)\n            }, void 0, false, {\n                fileName: \"/Users/main/Documents/GitHub/Metatensor-App/pages/blog.js\",\n                lineNumber: 10,\n                columnNumber: 7\n            }, this),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_components_blog_layout__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {}, void 0, false, {\n                fileName: \"/Users/main/Documents/GitHub/Metatensor-App/pages/blog.js\",\n                lineNumber: 13,\n                columnNumber: 7\n            }, this),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(next_mdx_remote__WEBPACK_IMPORTED_MODULE_5__.MDXRemote, {\n                    ...source.data\n                }, void 0, false, {\n                    fileName: \"/Users/main/Documents/GitHub/Metatensor-App/pages/blog.js\",\n                    lineNumber: 15,\n                    columnNumber: 9\n                }, this)\n            }, void 0, false, {\n                fileName: \"/Users/main/Documents/GitHub/Metatensor-App/pages/blog.js\",\n                lineNumber: 14,\n                columnNumber: 7\n            }, this)\n        ]\n    }, void 0, true, {\n        fileName: \"/Users/main/Documents/GitHub/Metatensor-App/pages/blog.js\",\n        lineNumber: 9,\n        columnNumber: 5\n    }, this);\n};\nasync function getStaticProps() {\n    const source = await (0,_helpers_getpost__WEBPACK_IMPORTED_MODULE_3__[\"default\"])(\"pages/posts/md.mdx\");\n    const mdxSource = await (0,next_mdx_remote_serialize__WEBPACK_IMPORTED_MODULE_4__.serialize)(source);\n    return {\n        props: {\n            source: mdxSource\n        }\n    };\n}\n\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } });//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9wYWdlcy9ibG9nLmpzLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTtBQUFtRDtBQUN0QjtBQUNZO0FBQ2E7QUFDVjtBQUU3QixTQUFTSyxRQUFRLENBQUMsRUFBRUMsTUFBTSxHQUFFLEVBQUU7SUFDM0MscUJBQ0UsOERBQUNDLEtBQUc7OzBCQUNGLDhEQUFDTixrREFBSTswQkFDSCw0RUFBQ08sT0FBSzs4QkFBQyxpQkFBZTs7Ozs7d0JBQVE7Ozs7O29CQUN6QjswQkFDUCw4REFBQ1IsK0RBQVU7Ozs7b0JBQWM7MEJBQ3pCLDhEQUFDTyxLQUFHOzBCQUNGLDRFQUFDSCxzREFBUztvQkFBRSxHQUFHRSxNQUFNLENBQUNHLElBQUk7Ozs7O3dCQUFJOzs7OztvQkFDMUI7Ozs7OztZQUNGLENBQ047Q0FDSDtBQUVNLGVBQWVDLGNBQWMsR0FBRztJQUNyQyxNQUFNSixNQUFNLEdBQUcsTUFBTUosNERBQU8sQ0FBQyxvQkFBb0IsQ0FBQztJQUNsRCxNQUFNUyxTQUFTLEdBQUcsTUFBTVIsb0VBQVMsQ0FBQ0csTUFBTSxDQUFDO0lBQ3pDLE9BQU87UUFBRU0sS0FBSyxFQUFFO1lBQUVOLE1BQU0sRUFBRUssU0FBUztTQUFFO0tBQUUsQ0FBQztDQUN6QyIsInNvdXJjZXMiOlsid2VicGFjazovL21ldGF0ZW5zb3ItYXBwLy4vcGFnZXMvYmxvZy5qcz9jYmI0Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBCbG9nTGF5b3V0IGZyb20gXCIuLi9jb21wb25lbnRzL2Jsb2dfbGF5b3V0XCI7XG5pbXBvcnQgSGVhZCBmcm9tIFwibmV4dC9oZWFkXCI7XG5pbXBvcnQgZ2V0UG9zdCBmcm9tIFwiLi4vaGVscGVycy9nZXRwb3N0XCI7XG5pbXBvcnQgeyBzZXJpYWxpemUgfSBmcm9tIFwibmV4dC1tZHgtcmVtb3RlL3NlcmlhbGl6ZVwiO1xuaW1wb3J0IHsgTURYUmVtb3RlIH0gZnJvbSBcIm5leHQtbWR4LXJlbW90ZVwiO1xuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBCbG9nUGFnZSh7IHNvdXJjZSB9KSB7XG4gIHJldHVybiAoXG4gICAgPGRpdj5cbiAgICAgIDxIZWFkPlxuICAgICAgICA8dGl0bGU+TWV0YVRlbnNvciBCbG9nPC90aXRsZT5cbiAgICAgIDwvSGVhZD5cbiAgICAgIDxCbG9nTGF5b3V0PjwvQmxvZ0xheW91dD5cbiAgICAgIDxkaXY+XG4gICAgICAgIDxNRFhSZW1vdGUgey4uLnNvdXJjZS5kYXRhfSAvPlxuICAgICAgPC9kaXY+XG4gICAgPC9kaXY+XG4gICk7XG59XG5cbmV4cG9ydCBhc3luYyBmdW5jdGlvbiBnZXRTdGF0aWNQcm9wcygpIHtcbiAgY29uc3Qgc291cmNlID0gYXdhaXQgZ2V0UG9zdChcInBhZ2VzL3Bvc3RzL21kLm1keFwiKTtcbiAgY29uc3QgbWR4U291cmNlID0gYXdhaXQgc2VyaWFsaXplKHNvdXJjZSk7XG4gIHJldHVybiB7IHByb3BzOiB7IHNvdXJjZTogbWR4U291cmNlIH0gfTtcbn1cbiJdLCJuYW1lcyI6WyJCbG9nTGF5b3V0IiwiSGVhZCIsImdldFBvc3QiLCJzZXJpYWxpemUiLCJNRFhSZW1vdGUiLCJCbG9nUGFnZSIsInNvdXJjZSIsImRpdiIsInRpdGxlIiwiZGF0YSIsImdldFN0YXRpY1Byb3BzIiwibWR4U291cmNlIiwicHJvcHMiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./pages/blog.js\n");
 
 /***/ }),
 
@@ -259,6 +270,17 @@ eval("module.exports = __webpack_require__(/*! ./dist/client/image */ \"./node_m
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 eval("module.exports = __webpack_require__(/*! ./dist/client/link */ \"./node_modules/next/dist/client/link.js\")\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvbmV4dC9saW5rLmpzLmpzIiwibWFwcGluZ3MiOiJBQUFBLHlHQUE4QyIsInNvdXJjZXMiOlsid2VicGFjazovL21ldGF0ZW5zb3ItYXBwLy4vbm9kZV9tb2R1bGVzL25leHQvbGluay5qcz83NWIzIl0sInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gcmVxdWlyZSgnLi9kaXN0L2NsaWVudC9saW5rJylcbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./node_modules/next/link.js\n");
+
+/***/ }),
+
+/***/ "gray-matter":
+/*!******************************!*\
+  !*** external "gray-matter" ***!
+  \******************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("gray-matter");
 
 /***/ }),
 
@@ -589,6 +611,50 @@ module.exports = require("react");
 
 "use strict";
 module.exports = require("react/jsx-dev-runtime");
+
+/***/ }),
+
+/***/ "next-mdx-remote":
+/*!**********************************!*\
+  !*** external "next-mdx-remote" ***!
+  \**********************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = import("next-mdx-remote");;
+
+/***/ }),
+
+/***/ "next-mdx-remote/serialize":
+/*!********************************************!*\
+  !*** external "next-mdx-remote/serialize" ***!
+  \********************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = import("next-mdx-remote/serialize");;
+
+/***/ }),
+
+/***/ "fs":
+/*!*********************!*\
+  !*** external "fs" ***!
+  \*********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("fs");
+
+/***/ }),
+
+/***/ "path":
+/*!***********************!*\
+  !*** external "path" ***!
+  \***********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("path");
 
 /***/ })
 
