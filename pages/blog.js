@@ -4,7 +4,7 @@ import getPost from "../helpers/getpost";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 
-export default function BlogPage({ source }) {
+export default function BlogPage({ data, content }) {
   return (
     <div>
       <Head>
@@ -12,14 +12,15 @@ export default function BlogPage({ source }) {
       </Head>
       <BlogLayout></BlogLayout>
       <div>
-        <MDXRemote {...source.data} />
+        <MDXRemote {...content} />
       </div>
     </div>
   );
 }
 
 export async function getStaticProps() {
-  const source = await getPost("pages/posts/md.mdx");
-  const mdxSource = await serialize(source);
-  return { props: { source: mdxSource } };
+  const post = getPost("pages/posts/md.mdx");
+  const { data, content } = post;
+  const mdxSource = await serialize(content);
+  return { props: { data, content: mdxSource } };
 }
