@@ -17,9 +17,9 @@ export default function BlogPage({ posts }) {
           <h1 className="mb-5 text-2xl">MetaTensor Blog</h1>
         </div>
       </div>
-      <div className="container ml-auto p-10 space-y-10">
+      <div className="container mx-auto">
         <h1 className="font-bold text-2xl">News and Articles</h1>
-        <div className="grid grid-cols-2">
+        <div className="box-border grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-y-4">
           {posts.map((post) => (
             <BlogLayout
               title={post.data.title}
