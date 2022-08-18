@@ -23,10 +23,12 @@ export default function BlogPage({ posts }) {
           <div className="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-y-4">
             {posts.map((post) => (
               <BlogLayout
+                key={post.key}
                 title={post.data.title}
                 description={post.data.description}
                 date={post.data.date}
                 thumbnail={thumbnail}
+                slug={post.slug}
               ></BlogLayout>
             ))}
           </div>
