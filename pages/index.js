@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
+import Footer from "../components/footer";
 import styles from "../styles/Home.module.css";
 import Intro from "../components/company_intro";
 import Solutions from "../components/solutions_card";
@@ -67,6 +67,9 @@ export default function Home({ latest_post }) {
             slug={postt.slug}
           ></Blog_Articles>
         ))}
+      </div>
+      <div className="my-5">
+        <Footer></Footer>
       </div>
     </div>
   );
