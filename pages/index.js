@@ -4,8 +4,43 @@ import styles from "../styles/Home.module.css";
 import Intro from "../components/company_intro";
 import Solutions from "../components/solutions_card";
 import Aboutus from "../components/aboutus";
+import Blog_Articles from "../components/blog_articles";
+import getPosts from "../helpers/getposts";
 
-export default function Home() {
+const thumbnail = (
+  <img src={"https://placeimg.com/400/225/arch"} alt={"Shoes"} />
+);
+
+// const BlogPosts = ({ posts }) => {
+//   posts.filter((post, i) => {
+//     if (i === posts.length || i === posts.length - 1) {
+//       return post;
+//     }
+//   });
+// };
+
+// const BlogArticles = ({ posts }) => {
+//   return (
+//     <div className="flex w-full sm:flex-col lg:flex-row">
+//       {posts.filter((post, i) =>
+//         i === posts.length || i === posts.length - 1 ? (
+//           <BlogLayout
+//             key={post.key}
+//             title={post.data.title}
+//             description={post.data.description}
+//             date={post.data.date}
+//             thumbnail={thumbnail}
+//             slug={post.slug}
+//           ></BlogLayout>
+//         ) : (
+//           <div>err</div>
+//         )
+//       )}
+//     </div>
+//   );
+// };
+
+export default function Home({ latest_post }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -21,6 +56,29 @@ export default function Home() {
       <div className="m-5">
         <Aboutus></Aboutus>
       </div>
+      <div className="flex flex-col w-full sm:flex-col lg:flex-row">
+        {latest_post.map((postt) => (
+          <Blog_Articles
+            key={postt.key}
+            title={postt.data.title}
+            description={postt.data.description}
+            date={postt.data.date}
+            thumbnail={thumbnail}
+            slug={postt.slug}
+          ></Blog_Articles>
+        ))}
+      </div>
     </div>
   );
+}
+export async function getStaticProps() {
+  const posts = getPosts();
+  const latest_post = posts.filter((post, i) => {
+    if (i === posts.length - 1 || i === posts.length - 2) {
+      console.log(posts.length);
+      return post;
+    }
+  });
+  console.log(latest_post.length);
+  return { props: { latest_post } };
 }
