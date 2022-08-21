@@ -9,7 +9,7 @@ export default function Blog_Articles({
 }) {
   return (
     <div>
-      <div className="grid flex-grow h-auto card bg-base-300 rounded-box place-items-center">
+      <div className="card w-96 rounded-box mx-5">
         <figure>{thumbnail}</figure>
         <div className="card-body">
           <Link href={"/[slug]"} as={`${slug}`}>
@@ -19,7 +19,6 @@ export default function Blog_Articles({
           <p>{date}</p>
         </div>
       </div>
-      <div className="divider sm:divider-vertical lg:divider-horizontal"></div>
     </div>
   );
 }

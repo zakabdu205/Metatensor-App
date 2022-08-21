@@ -56,17 +56,20 @@ export default function Home({ latest_post }) {
       <div className="m-5">
         <Aboutus></Aboutus>
       </div>
-      <div className="flex flex-col w-full sm:flex-col lg:flex-row">
-        {latest_post.map((postt) => (
-          <Blog_Articles
-            key={postt.key}
-            title={postt.data.title}
-            description={postt.data.description}
-            date={postt.data.date}
-            thumbnail={thumbnail}
-            slug={postt.slug}
-          ></Blog_Articles>
-        ))}
+      <h2 className="text-3xl font-bold">Latest News and Articles:</h2>
+      <div className="flex flex-col w-full bg-base-100 sm:flex-col lg:flex-row">
+        <section className="flex flex-col sm:flex-col lg:flex-row mx-auto">
+          {latest_post.map((postt) => (
+            <Blog_Articles
+              key={postt.key}
+              title={postt.data.title}
+              description={postt.data.description}
+              date={postt.data.date}
+              thumbnail={thumbnail}
+              slug={postt.slug}
+            ></Blog_Articles>
+          ))}
+        </section>
       </div>
       <div className="my-5">
         <Footer></Footer>
