@@ -5,10 +5,10 @@ export default function Aboutus() {
   return (
     <div className="card lg:card-side bg-base-100 shadow-xl">
       <figure>
-        <Image src={Aboutus_Image} width={1080} height={1080} alt="Album" />
+        <Image src={Aboutus_Image} width={850} height={850} alt="Album" />
       </figure>
       <div className="card-body">
-        <h2 className="card-title font-bold text-5xl">ABOUT METATENSOR</h2>
+        <h2 className="card-title font-bold text-5xl">About MetaTensor</h2>
         <p className="text-2xl tracking-wide leading-loose">
           MetaTensor is a consumer-focused online solution. Building and
           Researching the latest technologies such as (Artificial Intelligence,
