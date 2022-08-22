@@ -6,10 +6,10 @@ import Solutions from "../components/solutions_card";
 import Aboutus from "../components/aboutus";
 import Blog_Articles from "../components/blog_articles";
 import getPosts from "../helpers/getposts";
+import MetatensorLogo from "/Users/main/Documents/GitHub/Metatensor-App/public/images/Meta Tensor.png";
+import Image from "next/image";
 
-const thumbnail = (
-  <img src={"https://placeimg.com/400/225/arch"} alt={"Shoes"} />
-);
+const thumbnail = <Image src={MetatensorLogo} alt={"MetatensorLogo"} />;
 
 export default function Home({ latest_post }) {
   return (

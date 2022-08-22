@@ -2,10 +2,11 @@ import BlogLayout from "../components/blog_layout";
 import Head from "next/head";
 import getPosts from "../helpers/getposts";
 import styles from "../styles/Home.module.css";
+import MetatensorLogo from "/Users/main/Documents/GitHub/Metatensor-App/public/images/Meta Tensor.png";
+import Image from "next/image";
+import Link from "next/link";
 
-const thumbnail = (
-  <img src={"https://placeimg.com/400/225/arch"} alt={"Shoes"} />
-);
+const thumbnail = <Image src={MetatensorLogo} alt={"MetaTensorLogo"} />;
 export default function BlogPage({ posts }) {
   return (
     <div>
@@ -14,7 +15,9 @@ export default function BlogPage({ posts }) {
       </Head>
       <div className={styles.container}>
         <div className="navbar bg-base-100 font-bold">
-          <h1 className="mb-5 text-2xl">MetaTensor Blog</h1>
+          <h1 className="mb-5 text-2xl">
+            <Link href={"/"}>MetaTensor Blog</Link>
+          </h1>
         </div>
       </div>
       <div className="container mx-auto">
