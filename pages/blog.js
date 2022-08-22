@@ -5,6 +5,7 @@ import styles from "../styles/Home.module.css";
 import MetatensorLogo from "/Users/main/Documents/GitHub/Metatensor-App/public/images/Meta Tensor.png";
 import Image from "next/image";
 import Link from "next/link";
+import Footer from "../components/footer";
 
 const thumbnail = <Image src={MetatensorLogo} alt={"MetaTensorLogo"} />;
 export default function BlogPage({ posts }) {
@@ -36,6 +37,9 @@ export default function BlogPage({ posts }) {
             ))}
           </div>
         </section>
+      </div>
+      <div className="my-5">
+        <Footer></Footer>
       </div>
     </div>
   );

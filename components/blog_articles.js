@@ -9,7 +9,7 @@ export default function Blog_Articles({
 }) {
   return (
     <div>
-      <div className="card w-96 rounded-box mx-5">
+      <div className="card w-96 rounded-box mx-5 ">
         <figure>{thumbnail}</figure>
         <div className="card-body">
           <Link href={"/[slug]"} as={`${slug}`}>
