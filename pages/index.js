@@ -50,11 +50,6 @@ export default function Home({ latest_post }) {
 }
 export async function getStaticProps() {
   const posts = getPosts();
-  const latest_post = posts.filter((post, i) => {
-    if (i === posts.length - 1 || i === posts.length - 2) {
-      return post;
-    }
-  });
-
+  const latest_post = [posts[posts.length - 1], posts[posts.length - 2]];
   return { props: { latest_post } };
 }

@@ -38,7 +38,7 @@ export default function BlogPage({ posts }) {
           </div>
         </section>
       </div>
-      <div className="my-5">
+      <div className=" bg-bottom my-5">
         <Footer></Footer>
       </div>
     </div>
